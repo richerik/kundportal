@@ -10,7 +10,7 @@ a, a:hover, a:active {
     text-decoration: none;
     color: #788083;
 }
-a:hover {
+a:hover, a.active {
     color: #3498db;
 }
 

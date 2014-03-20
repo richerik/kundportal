@@ -313,6 +313,62 @@
         "email": "Michael@bluth.com"
       }
     },
+	    {
+      "id": 13,
+      "text": "Become World's first Analyst + Therapist",
+      "size": "2",
+      "color": "blue",
+      "priority": "",
+      "status": "planned",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 1,
+        "name": "Backlog"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 5,
+        "name": "Tobias Funke",
+        "userName": "tobias",
+        "email": "Tobias@funke.com"
+      }
+    },
+	{
+      "id": 15,
+      "text": "Perform amazing magic trick",
+      "size": "4",
+      "color": "orange",
+      "priority": "",
+      "status": "planned",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 1,
+        "name": "Backlog"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
     {
       "id": 12,
       "text": "Marry Me!",
@@ -342,34 +398,6 @@
       }
     },
     {
-      "id": 13,
-      "text": "Become World's first Analyst + Therapist",
-      "size": "2",
-      "color": "blue",
-      "priority": "",
-      "status": "planned",
-      "project": {
-        "id": 1,
-        "name": "Söksida"
-      },
-      "phase": {
-        "id": 1,
-        "name": "Backlog"
-      },
-      "creator": {
-        "id": 1,
-        "name": "Gob Bluth",
-        "userName": "gob",
-        "email": "Gob@bluth.com"
-      },
-      "owner": {
-        "id": 5,
-        "name": "Tobias Funke",
-        "userName": "tobias",
-        "email": "Tobias@funke.com"
-      }
-    },
-    {
       "id": 14,
       "text": "Convince myself I don't need Mother",
       "size": "12",
@@ -395,34 +423,6 @@
         "name": "Buster Bluth",
         "userName": "buster",
         "email": "Buster@bluth.com"
-      }
-    },
-    {
-      "id": 15,
-      "text": "Perform amazing magic trick",
-      "size": "4",
-      "color": "orange",
-      "priority": "",
-      "status": "planned",
-      "project": {
-        "id": 1,
-        "name": "Söksida"
-      },
-      "phase": {
-        "id": 1,
-        "name": "Backlog"
-      },
-      "creator": {
-        "id": 1,
-        "name": "Gob Bluth",
-        "userName": "gob",
-        "email": "Gob@bluth.com"
-      },
-      "owner": {
-        "id": 1,
-        "name": "Gob Bluth",
-        "userName": "gob",
-        "email": "Gob@bluth.com"
       }
     },
     {
