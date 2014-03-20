@@ -1,0 +1,458 @@
+﻿{
+  "page": 1,
+  "pageSize": 100,
+  "totalPages": 1,
+  "totalItems": 16,
+  "items": [
+    {
+      "id": 1,
+      "text": "Som projektledare vill jag att det per automatik skapas upp en kundportalsida när jag skapar ett projekt i AgileZen",
+      "size": "5",
+      "color": "teal",
+      "priority": "9",
+      "deadline": "2011-02-24T00:00:00",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Startsida"
+      },
+      "phase": {
+        "id": 3,
+        "name": "Working"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
+    {
+      "id": 2,
+      "text": "Som kund vill jag kunna se antal sprintar i projektet",
+      "size": "8",
+      "color": "orange",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Startsida"
+      },
+      "phase": {
+        "id": 4,
+        "name": "Complete"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
+    {
+      "id": 3,
+      "text": "Som kund vill jag kunna se vilka backloggs som finns i projektet",
+      "size": "4",
+      "color": "orange",
+      "priority": "",
+      "status": "finished",
+      "project": {
+        "id": 1,
+        "name": "Startsida"
+      },
+      "phase": {
+        "id": 5,
+        "name": "Archive"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
+    {
+      "id": 4,
+      "text": "Find Dad, win his approval",
+      "size": "4",
+      "color": "orange",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Startsida"
+      },
+      "phase": {
+        "id": 3,
+        "name": "Working"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
+    {
+      "id": 5,
+      "text": "Get acting job",
+      "size": "7",
+      "color": "blue",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Design"
+      },
+      "phase": {
+        "id": 3,
+        "name": "Working"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 5,
+        "name": "Tobias Funke",
+        "userName": "tobias",
+        "email": "Tobias@funke.com"
+      }
+    },
+    {
+      "id": 6,
+      "text": "Som kund vill jag kunna se hur mycket en poäng motsvarar i timmar",
+      "size": "9",
+      "color": "purple",
+      "priority": "",
+      "status": "finished",
+      "project": {
+        "id": 1,
+        "name": "Design"
+      },
+      "phase": {
+        "id": 5,
+        "name": "Archive"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 3,
+        "name": "Lucille Bluth",
+        "userName": "lucille",
+        "email": "Lucille@bluth.com"
+      }
+    },
+    {
+      "id": 7,
+      "text": "Get back control of company",
+      "size": "20",
+      "color": "teal",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Design"
+      },
+      "phase": {
+        "id": 3,
+        "name": "Working"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
+    {
+      "id": 8,
+      "text": "Go out with Steve Holt (Steve Holt!)",
+      "size": "10",
+      "color": "red",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Design"
+      },
+      "phase": {
+        "id": 2,
+        "name": "Ready"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 7,
+        "name": "Maeby Funke",
+        "userName": "maeby",
+        "email": "maeby@funke.com"
+      }
+    },
+    {
+      "id": 9,
+      "text": "Som kund vill jag kunna se hur många timmar jag har i projektet",
+      "size": "4",
+      "color": "blue",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Responsiv"
+      },
+      "phase": {
+        "id": 4,
+        "name": "Complete"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 5,
+        "name": "Tobias Funke",
+        "userName": "tobias",
+        "email": "Tobias@funke.com"
+      }
+    },
+    {
+      "id": 10,
+      "text": "Kiss Maeby",
+      "size": "1",
+      "color": "green",
+      "priority": "",
+      "status": "finished",
+      "project": {
+        "id": 1,
+        "name": "Responsiv"
+      },
+      "phase": {
+        "id": 5,
+        "name": "Archive"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 6,
+        "name": "George Michael Bluth",
+        "userName": "georgemichael",
+        "email": "georgemichael@bluth.com"
+      }
+    },
+    {
+      "id": 11,
+      "text": "Get new car.  Too many hop-ons in StairCar.",
+      "size": "2",
+      "color": "teal",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 2,
+        "name": "Ready"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 2,
+        "name": "Michael Bluth",
+        "userName": "Michael",
+        "email": "Michael@bluth.com"
+      }
+    },
+    {
+      "id": 12,
+      "text": "Marry Me!",
+      "size": "40",
+      "color": "red",
+      "priority": "",
+      "status": "planned",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 1,
+        "name": "Backlog"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 7,
+        "name": "Maeby Funke",
+        "userName": "maeby",
+        "email": "maeby@funke.com"
+      }
+    },
+    {
+      "id": 13,
+      "text": "Become World's first Analyst + Therapist",
+      "size": "2",
+      "color": "blue",
+      "priority": "",
+      "status": "planned",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 1,
+        "name": "Backlog"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 5,
+        "name": "Tobias Funke",
+        "userName": "tobias",
+        "email": "Tobias@funke.com"
+      }
+    },
+    {
+      "id": 14,
+      "text": "Convince myself I don't need Mother",
+      "size": "12",
+      "color": "yellow",
+      "priority": "",
+      "status": "planned",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 1,
+        "name": "Backlog"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 8,
+        "name": "Buster Bluth",
+        "userName": "buster",
+        "email": "Buster@bluth.com"
+      }
+    },
+    {
+      "id": 15,
+      "text": "Perform amazing magic trick",
+      "size": "4",
+      "color": "orange",
+      "priority": "",
+      "status": "planned",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 1,
+        "name": "Backlog"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      }
+    },
+    {
+      "id": 16,
+      "text": "Work in the Banana stand",
+      "size": "5",
+      "color": "green",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 3,
+        "name": "Working"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 6,
+        "name": "George Michael Bluth",
+        "userName": "georgemichael",
+        "email": "georgemichael@bluth.com"
+      }
+    }
+  ]
+}
+
