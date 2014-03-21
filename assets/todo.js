@@ -1,6 +1,6 @@
-
+﻿
 var todo = todo || {},
-    budget = 74,
+    budget = 40,
     points = 0,
     data; //= JSON.parse(localStorage.getItem("todoData"));
 
@@ -29,6 +29,8 @@ data = data || {};
         options = $.extend({}, defaults, options);
 
         todo.add();
+
+        $("#pending").find("h3").text("Inom resterande budget " + " på " + budget + "p");
 
         //if ($.isEmptyObject(data)) {
         //    todo.add();
@@ -84,7 +86,7 @@ data = data || {};
             var position = 0;
             var positionTwo;
 
-            $("#pending").find("h3").text("Inom budget " + budget);
+            //$("#pending").find("h3").text("Inom budget " + budget);
 
             $(value).sortable({
                 items: '> .todo-task',
@@ -190,7 +192,7 @@ data = data || {};
                         allTaskPoints += ui.item.data("points");
 
 
-                        $("#pending").find("h3").text("Inom budget " + budget + " " + allTaskPoints);
+                        //$("#pending").find("h3").text("Inom budget " + budget + " " + allTaskPoints);
 
                     }
                    
@@ -226,6 +228,8 @@ data = data || {};
                         
 
                     });
+
+                    //$("#pending").find("h3").text("Inom budget " + allTaskPoints + "p av " + budget + "p");
 
                     if (allTaskPoints < budget) {
 
@@ -285,6 +289,7 @@ data = data || {};
     // Add Task
     var generateStories = function (params) {
         var parent = $(codes[params.code]),
+            allPoints = 0,
             wrapper;
 
         if (!parent) {
@@ -295,6 +300,11 @@ data = data || {};
 
         if (points > budget) {
             parent = $("#inProgress");
+        } else if (points <= budget) {
+
+            //allPoints = points;
+            //$("#pending").find("h3").text("Inom budget " + allPoints + "p av " + budget + "p");
+            
         }
 
         wrapper = $("<div />", {

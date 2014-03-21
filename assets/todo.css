@@ -10,7 +10,7 @@ a, a:hover, a:active {
     text-decoration: none;
     color: #788083;
 }
-a:hover {
+a:hover, a.active {
     color: #3498db;
 }
 
@@ -56,6 +56,27 @@ a:hover {
     border-bottom: 1px solid #DDE1ED;
     display: block;
     padding: 10px 15px;
+    position: relative;
+}
+#subnav a span {
+    position: absolute;
+    right: 15px;
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(149, 155, 174, 0.3) inset;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#subnav a.active span {
+    color: #fff;
+    background: #3498DB;
+}
+#subnav a.active:hover span {
+    color: #fff;
+}
+#subnav a:hover span {
+    color: #788083;
 }
 #subnav li:last-child a {
     border-bottom: none;
@@ -94,6 +115,8 @@ a:hover {
     display: block;
     color: #787D8C;
     padding: 4px 0;
+    font-size: 11px;
+    font-weight: 600;
 }
 #stats .container .smaller {
     font-size: 11px;
@@ -137,10 +160,10 @@ a:hover {
     background:#f8f9fa;
     border-top: 1px solid #EEEEEE;
     color: #787D8C;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     line-height: 25px;
-    padding: 0 10px;
+    padding: 0 8px;
 }
 /*#F4F5F8*/
 /*#inProgress h3 {
