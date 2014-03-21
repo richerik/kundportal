@@ -72,6 +72,9 @@ a:hover, a.active {
     color: #fff;
     background: #3498DB;
 }
+#subnav a.active:hover span {
+    color: #fff;
+}
 #subnav a:hover span {
     color: #788083;
 }
@@ -112,6 +115,8 @@ a:hover, a.active {
     display: block;
     color: #787D8C;
     padding: 4px 0;
+    font-size: 11px;
+    font-weight: 600;
 }
 #stats .container .smaller {
     font-size: 11px;
@@ -155,10 +160,10 @@ a:hover, a.active {
     background:#f8f9fa;
     border-top: 1px solid #EEEEEE;
     color: #787D8C;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     line-height: 25px;
-    padding: 0 10px;
+    padding: 0 8px;
 }
 /*#F4F5F8*/
 /*#inProgress h3 {

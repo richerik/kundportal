@@ -173,6 +173,62 @@
         "email": "Lucille@bluth.com"
       }
     },
+	{
+      "id": 10,
+      "text": "Kiss Maeby",
+      "size": "1",
+      "color": "green",
+      "priority": "",
+      "status": "finished",
+      "project": {
+        "id": 1,
+        "name": "Responsiv"
+      },
+      "phase": {
+        "id": 5,
+        "name": "Archive"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 6,
+        "name": "George Michael Bluth",
+        "userName": "georgemichael",
+        "email": "georgemichael@bluth.com"
+      }
+    },
+    {
+      "id": 11,
+      "text": "Get new car.  Too many hop-ons in StairCar.",
+      "size": "2",
+      "color": "teal",
+      "priority": "",
+      "status": "started",
+      "project": {
+        "id": 1,
+        "name": "Söksida"
+      },
+      "phase": {
+        "id": 2,
+        "name": "Ready"
+      },
+      "creator": {
+        "id": 1,
+        "name": "Gob Bluth",
+        "userName": "gob",
+        "email": "Gob@bluth.com"
+      },
+      "owner": {
+        "id": 2,
+        "name": "Michael Bluth",
+        "userName": "Michael",
+        "email": "Michael@bluth.com"
+      }
+    },
     {
       "id": 7,
       "text": "Get back control of company",
@@ -257,63 +313,7 @@
         "email": "Tobias@funke.com"
       }
     },
-    {
-      "id": 10,
-      "text": "Kiss Maeby",
-      "size": "1",
-      "color": "green",
-      "priority": "",
-      "status": "finished",
-      "project": {
-        "id": 1,
-        "name": "Responsiv"
-      },
-      "phase": {
-        "id": 5,
-        "name": "Archive"
-      },
-      "creator": {
-        "id": 1,
-        "name": "Gob Bluth",
-        "userName": "gob",
-        "email": "Gob@bluth.com"
-      },
-      "owner": {
-        "id": 6,
-        "name": "George Michael Bluth",
-        "userName": "georgemichael",
-        "email": "georgemichael@bluth.com"
-      }
-    },
-    {
-      "id": 11,
-      "text": "Get new car.  Too many hop-ons in StairCar.",
-      "size": "2",
-      "color": "teal",
-      "priority": "",
-      "status": "started",
-      "project": {
-        "id": 1,
-        "name": "Söksida"
-      },
-      "phase": {
-        "id": 2,
-        "name": "Ready"
-      },
-      "creator": {
-        "id": 1,
-        "name": "Gob Bluth",
-        "userName": "gob",
-        "email": "Gob@bluth.com"
-      },
-      "owner": {
-        "id": 2,
-        "name": "Michael Bluth",
-        "userName": "Michael",
-        "email": "Michael@bluth.com"
-      }
-    },
-	    {
+	{
       "id": 13,
       "text": "Become World's first Analyst + Therapist",
       "size": "2",

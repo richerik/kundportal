@@ -1,6 +1,6 @@
-
+﻿
 var todo = todo || {},
-    budget = 80,
+    budget = 40,
     points = 0,
     data; //= JSON.parse(localStorage.getItem("todoData"));
 
@@ -29,6 +29,8 @@ data = data || {};
         options = $.extend({}, defaults, options);
 
         todo.add();
+
+        $("#pending").find("h3").text("Inom resterande budget " + " på " + budget + "p");
 
         //if ($.isEmptyObject(data)) {
         //    todo.add();
@@ -227,7 +229,7 @@ data = data || {};
 
                     });
 
-                    $("#pending").find("h3").text("Inom budget " + allTaskPoints + "p av " + budget + "p");
+                    //$("#pending").find("h3").text("Inom budget " + allTaskPoints + "p av " + budget + "p");
 
                     if (allTaskPoints < budget) {
 
@@ -300,8 +302,8 @@ data = data || {};
             parent = $("#inProgress");
         } else if (points <= budget) {
 
-            allPoints = points;
-            $("#pending").find("h3").text("Inom budget " + allPoints + "p av " + budget + "p");
+            //allPoints = points;
+            //$("#pending").find("h3").text("Inom budget " + allPoints + "p av " + budget + "p");
             
         }
 
