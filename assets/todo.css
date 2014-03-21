@@ -10,7 +10,7 @@ a, a:hover, a:active {
     text-decoration: none;
     color: #788083;
 }
-a:hover, a.active {
+a:hover, li.active a {
     color: #3498db;
 }
 
@@ -74,11 +74,11 @@ a:hover, a.active {
     padding-left: 5px;
     padding-right: 5px;
 }
-#subnav a.active span {
+#subnav li.active span {
     color: #fff;
     background: #3498DB;
 }
-#subnav a.active:hover span {
+#subnav li.active a:hover span {
     color: #fff;
 }
 #subnav a:hover span {

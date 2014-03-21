@@ -34,7 +34,19 @@ data = data || {};
 
         $("#subnav li a").on("click", function (e) {
             e.preventDefault();
-            alert($(this).attr("class"));
+            var navSate = $(this).attr("class");
+            $("#" + navSate).prevAll(".task-list").hide();
+            $("#" + navSate).nextAll(".task-list").hide();
+            $("#" + navSate).show();
+            $(this).parent().addClass("active");
+            $(this).parent().prevAll("li").removeClass("active");
+            $(this).parent().nextAll("li").removeClass("active");
+
+            if (navSate == "backlog") {
+                $("#over-budget").show();
+                $("#below-budget").show();
+            }
+
         });
 
         $.each(codes, function (index, value) {
@@ -210,6 +222,12 @@ data = data || {};
             
         }
 
+        //if (params.code != "1" && params.code != "2") {
+
+        //    parent = params.code;
+
+        //}
+
         wrapper = $("<div />", {
             "class": defaults.todoTask,
             "id": defaults.taskId + params.id,
@@ -231,6 +249,34 @@ data = data || {};
             "class": "tags",
             "text": params.tag
         }).appendTo(wrapper);
+
+        $.each($("#subnav li a"), function (index, states) {
+
+            parent = "#"+$(this).attr("class");
+
+            wrapper = $("<div />", {
+                "class": defaults.todoTask,
+                "id": defaults.taskId + params.id,
+                "data": params.id,
+                "data-points": params.points
+            }).appendTo(parent);
+
+            $("<div />", {
+                "class": "points",
+                "text": params.points
+            }).appendTo(wrapper);
+
+            $("<div />", {
+                "class": defaults.todoHeader,
+                "text": params.title
+            }).appendTo(wrapper);
+
+            $("<div />", {
+                "class": "tags",
+                "text": params.tag
+            }).appendTo(wrapper);
+
+        });
 
     };
 
