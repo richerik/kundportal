@@ -2,7 +2,7 @@
 var todo = todo || {},
     budget = 40,
     points = 0,
-    data; //= JSON.parse(localStorage.getItem("todoData"));
+    data;
 
 data = data || {};
 
@@ -19,8 +19,8 @@ data = data || {};
             deleteDiv: "delete-div",
             deleteAll: ".delete-all"
         }, codes = {
-            "1" : "#pending",
-            "2" : "#inProgress"
+            "1": "#over-budget",
+            "2": "#below-budget"
         };
 
     todo.init = function (options) {
@@ -30,53 +30,12 @@ data = data || {};
 
         todo.add();
 
-        $("#pending").find("h3").text("Inom resterande budget " + " på " + budget + "p");
+        $("#over-budget").find("h3").text("Inom resterande budget " + " på " + budget + "p");
 
-        //if ($.isEmptyObject(data)) {
-        //    todo.add();
-        //} else {
-        //    $.each(data, function (index, params) {
-        //        generateStories(params);
-        //    });
-        //}
- 
-        // Adding drop function to each category of task
-        //$.each(codes, function (index, value) {
-        //    $(value).droppable({
-        //        over: function (event, ui) {
-        //            if ($(this).attr("id") == "pending") {
-        //                ui.draggable.removeClass('orange');
-        //                ui.draggable.addClass('green');
-        //            } else {
-        //                ui.draggable.removeClass('green');
-        //                ui.draggable.addClass('orange');
-        //            }
-        //        },
-        //        drop: function (event, ui) {
-        //                var element = ui.helper,
-        //                    css_id = element.attr("id"),
-        //                    id = css_id.replace(options.taskId, ""),
-        //                    object = data[id];
-
-        //                    // Removing old element
-        //                    removeElement(object);
-
-        //                    // Changing object code
-        //                    object.code = index;
-
-        //                    // Generating new element
-        //                    generateStories(object);
-
-        //                    // Updating Local Storage
-        //                    data[id] = object;
-        //                    localStorage.setItem("todoData", JSON.stringify(data));
-
-        //                    // Hiding Delete Area
-        //                    $("#" + defaults.deleteDiv).hide();
-        //            }
-        //    });
-        //});
-
+        $("#subnav li a").on("click", function (e) {
+            e.preventDefault();
+            alert($(this).attr("class"));
+        });
 
         $.each(codes, function (index, value) {
 
@@ -85,8 +44,6 @@ data = data || {};
             var secondSortIndex;
             var position = 0;
             var positionTwo;
-
-            //$("#pending").find("h3").text("Inom budget " + budget);
 
             $(value).sortable({
                 items: '> .todo-task',
@@ -99,62 +56,19 @@ data = data || {};
                 scrollSpeed: 2,
                 change: function(event, ui) {
                     if (ui.sender == null) {
-                        
-                        //placeholder = $();
-                        //currentArea = $();
-                        //taskItems = $();
-                        //taskPoints = 0;
 
-                        //currentArea = ui.item.parent().attr('id');
                         placeholder = $(".ui-sortable-placeholder");
                         taskItems = placeholder.prev(".todo-task");
 
-                        //sortIndex = ui.placeholder.index() + 1;
-                        //if (!secondSortIndex) {
-                        //    secondSortIndex = ui.placeholder.index() + 1;
-                        //}
-                        //positionTwo = position;
-                        //position = secondSortIndex - sortIndex;
 
-                        //console.log(position);
-
-                        //if (placeholder.parent().attr('id') == "pending") {
-                        //    ui.item.addClass("green");
-                        //} else {
-                        //    ui.item.removeClass("green");
-                        //}
-
-
-                        //if (ui.item.parent().attr('id') == "pending") {
-
-                        //    taskItems = placeholder.nextAll(".todo-task");
-
-                        //    $.each(taskItems, function(index, value) {
-
-                        //        taskPoints += $(value).data("points");
-
-                        //    });
-
-                        //    allTaskPoints = allTaskPoints - taskPoints;
-
-                        //    placeholder.hide();
-                        //    $(".change-position").show();
-
-                        //    //placeholder.show();
-                        //    //$(".change-position").hide();
-
-                        //    taskItems.addClass("remove");
-
-                        //}
-
-                        if (placeholder.parent().attr('id') == "pending" && taskItems.hasClass("remove")) {
+                        if (placeholder.parent().attr('id') == "over-budget" && taskItems.hasClass("remove")) {
 
 
                             placeholder.hide();
                             $(".change-position").show();
                             ui.item.removeClass("green");
 
-                        } else if (placeholder.parent().attr('id') == "inProgress") {
+                        } else if (placeholder.parent().attr('id') == "below-budget") {
 
                             ui.item.removeClass("green");
                             
@@ -171,12 +85,12 @@ data = data || {};
                 },
                 start: function (event, ui) {
 
-                    if (ui.item.parent().attr('id') == "inProgress") {
+                    if (ui.item.parent().attr('id') == "below-budget") {
                         allTaskPoints = 0;
 
                         ui.item.addClass("active");
 
-                        $.each($("#pending").find(".todo-task"), function (index, value) {
+                        $.each($("#over-budget").find(".todo-task"), function (index, value) {
 
                             allTaskPoints += $(value).data("points");
                         
@@ -186,13 +100,9 @@ data = data || {};
                             
                             }
 
-
                         });
 
                         allTaskPoints += ui.item.data("points");
-
-
-                        //$("#pending").find("h3").text("Inom budget " + budget + " " + allTaskPoints);
 
                     }
                    
@@ -201,20 +111,20 @@ data = data || {};
 
                     $(ui.item).removeClass("active");
 
-                    if ($(".remove") && ui.item.parent().attr('id') == "pending" && $(".change-position").css('display') == 'none') {
-                        $(".remove").insertAfter("#inProgress h3");
+                    if ($(".remove") && ui.item.parent().attr('id') == "over-budget" && $(".change-position").css('display') == 'none') {
+                        $(".remove").insertAfter("#below-budget h3");
                         ui.item.removeClass("green");
                     }
-                    if (ui.item.parent().attr('id') == "inProgress") {
+                    if (ui.item.parent().attr('id') == "below-budget") {
                         $(".remove").removeClass("remove");
                         ui.item.removeClass("green");
                     }
                     if ($(".change-position").css('display') == 'block') {
                         $(ui.item).insertAfter(".change-position");
-                        $(".change-position").insertAfter("#inProgress h3");
+                        $(".change-position").insertAfter("#below-budget h3");
                         $(".change-position").hide();
                         ui.item.removeClass("green");
-                        $("#pending .todo-task").removeClass("remove");
+                        $("#over-budget .todo-task").removeClass("remove");
                         updateStories(ui);
                     }
 
@@ -222,24 +132,22 @@ data = data || {};
                     
                     
 
-                    $.each($("#pending").find(".todo-task"), function (index, value) {
+                    $.each($("#over-budget").find(".todo-task"), function (index, value) {
 
                         allTaskPoints += $(value).data("points");
                         
 
                     });
 
-                    //$("#pending").find("h3").text("Inom budget " + allTaskPoints + "p av " + budget + "p");
-
                     if (allTaskPoints < budget) {
 
-                        $.each($("#inProgress").find(".todo-task:not(.change-position)"), function (index, value) {
+                        $.each($("#below-budget").find(".todo-task:not(.change-position)"), function (index, value) {
                             
                             notBudgetTaskPoints += $(value).data("points");
                             
                             if (budget >= (notBudgetTaskPoints + allTaskPoints)) {
                                 
-                                $("#pending").append($(value));
+                                $("#over-budget").append($(value));
 
                             }
 
@@ -276,15 +184,13 @@ data = data || {};
 
                 // Updating Local Storage
                 data[id] = object;
-                //localStorage.setItem("todoData", JSON.stringify(data));
+
             };
 
 
         });
 
     };
-
-
 
     // Add Task
     var generateStories = function (params) {
@@ -299,11 +205,8 @@ data = data || {};
         points += parseInt(params.points);
 
         if (points > budget) {
-            parent = $("#inProgress");
+            parent = $("#below-budget");
         } else if (points <= budget) {
-
-            //allPoints = points;
-            //$("#pending").find("h3").text("Inom budget " + allPoints + "p av " + budget + "p");
             
         }
 
@@ -331,11 +234,6 @@ data = data || {};
 
     };
 
-    // Remove task
-    //var removeElement = function (params) {
-    //    $("#" + defaults.taskId + params.id).remove();
-    //};
-
     todo.add = function() {
         var id, title, points, tag, tempData;
 
@@ -362,7 +260,6 @@ data = data || {};
 
                     // Saving element in local storage
                     data[id] = tempData;
-                    //localStorage.setItem("todoData", JSON.stringify(data));
 
                     // Generate Todo Element
                     generateStories(tempData);
@@ -371,41 +268,5 @@ data = data || {};
         });
 
     };
-
-    //var generateDialog = function (message) {
-    //    var responseId = "response-dialog",
-    //        title = "Messaage",
-    //        responseDialog = $("#" + responseId),
-    //        buttonOptions;
-
-    //    if (!responseDialog.length) {
-    //        responseDialog = $("<div />", {
-    //                title: title,
-    //                id: responseId
-    //        }).appendTo($("body"));
-    //    }
-
-    //    responseDialog.html(message);
-
-    //    buttonOptions = {
-    //        "Ok" : function () {
-    //            responseDialog.dialog("close");
-    //        }
-    //    };
-
-    //    responseDialog.dialog({
-    //        autoOpen: true,
-    //        width: 400,
-    //        modal: true,
-    //        closeOnEscape: true,
-    //        buttons: buttonOptions
-    //    });
-    //};
-
-    //todo.clear = function () {
-    //    data = {};
-    //    localStorage.setItem("todoData", JSON.stringify(data));
-    //    $("." + defaults.todoTask).remove();
-    //};
 
 })(todo, data, jQuery);

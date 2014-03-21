@@ -68,7 +68,7 @@
         <div id="tasks" class="container">
 
             <div id="task-lists">
-                <div class="task-list" id="pending">
+                <div class="task-list" id="over-budget">
                     <h3>Inom budget</h3>
                     <!--<div class="todo-task">
                     <div class="task-header">Sample Header</div>
@@ -77,17 +77,30 @@
                 </div>-->
                 </div>
 
-                <div class="task-list" id="inProgress">
+                <div class="task-list" id="below-budget">
                     <h3>Utanför budget</h3>
                     <div class="todo-task change-position" style="display: none; height: 40px; background: #fafafa;"></div>
                 </div>
-            </div>
-            <div id="subnav">
+                
+                <div class="task-list" id="planned">
+
+                </div>
+                
+                <div class="task-list" id="ongoing">
+
+                </div>
+                
+                <div class="task-list" id="ended">
+
+                </div>
+                
+        </div>
+        <div id="subnav">
                 <ul>
-                    <li><a class="active" href="#">Backlog <span>40p</span></a></li>
-                    <li><a href="#">Kommande sprint <span>20p</span></a></li>
-                    <li><a href="#">Pågående sprint <span>20p</span></a></li>
-                    <li><a href="#">Avslutade sprintar <span>40p</span></a></li>
+                    <li><a class="active backlog" href="#">Backlog <span>40p</span></a></li>
+                    <li><a class="planned" href="#">Kommande sprint <span>20p</span></a></li>
+                    <li><a class="ongoing" href="#">Pågående sprint <span>20p</span></a></li>
+                    <li><a class="ended" href="#">Avslutade sprintar <span>40p</span></a></li>
                 </ul>
             </div>
 

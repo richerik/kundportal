@@ -14,6 +14,12 @@ a:hover, a.active {
     color: #3498db;
 }
 
+#planned,
+#ongoing,
+#ended {
+    display: none;
+}
+
 .container{
     margin: 0 auto;
     width: 1000px;
@@ -166,7 +172,7 @@ a:hover, a.active {
     padding: 0 8px;
 }
 /*#F4F5F8*/
-/*#inProgress h3 {
+/*#below-budget h3 {
 background:#f39c12
 }*/
 
@@ -190,7 +196,7 @@ background:#f39c12
     background: #f2faf6!important;
     visibility: visible !important;
 }
-#inProgress .ui-sortable-placeholder {
+#below-budget .ui-sortable-placeholder {
     background: #fafafa!important;
 }
 .points {
@@ -206,11 +212,11 @@ background:#f39c12
     text-align: center;
     border-radius: 2px;
 }
-#inProgress .points, .remove .points {
+#below-budget .points, .remove .points {
     background: #C5CFDE;
 }
 
-/*#inProgress .todo-task {
+/*#below-budget .todo-task {
     border-left: 3px solid #f39c12;
 }*/
 
