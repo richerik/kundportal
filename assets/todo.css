@@ -64,7 +64,7 @@ a:hover, li.active a {
     padding: 10px 15px;
     position: relative;
 }
-#subnav a span {
+#subnav a span, #tabs a span {
     position: absolute;
     right: 15px;
     font-size: 11px;
@@ -134,6 +134,34 @@ a:hover, li.active a {
     font-size: 16px;
     font-weight: 600;
     color: #2d2e34;
+}
+
+#tabs > a:first-child {
+    border-bottom: 1px solid #FFFFFF;
+    background: #fff;
+}
+#tabs > a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #D2D2D2 #D2D2D2 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #222222;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: -1px;
+    padding: 10px 60px 10px 20px;
+    position: relative;
+    z-index: 1000;
+    margin-right: -1px;
+    background: #F8F9FA;
+}
+#tabs a span {
+    right: 20px;
 }
 
 

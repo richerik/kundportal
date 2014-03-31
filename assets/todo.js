@@ -2,6 +2,8 @@
 var todo = todo || {},
     budget = 40,
     points = 0,
+    allPoints = 0,
+    maxPoints = 0,
     data;
 
 data = data || {};
@@ -207,7 +209,6 @@ data = data || {};
     // Add Task
     var generateStories = function (params) {
         var parent = $(codes[params.code]),
-            allPoints = 0,
             wrapper;
 
         if (!parent) {
@@ -250,9 +251,20 @@ data = data || {};
             "text": params.tag
         }).appendTo(wrapper);
 
-        $.each($("#subnav li a"), function (index, states) {
+        $.each($("#subnav li a:not(.backlog)"), function (index, states) {
 
-            parent = "#"+$(this).attr("class");
+            
+            maxPoints = $(this).data("points");
+
+            if (index == 0) {
+                allPoints += parseInt(params.points);
+            }
+
+            if (allPoints > maxPoints) {
+                return;
+            }
+
+            parent = "#" + $(this).attr("class");
 
             wrapper = $("<div />", {
                 "class": defaults.todoTask,
