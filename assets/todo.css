@@ -10,8 +10,14 @@ a, a:hover, a:active {
     text-decoration: none;
     color: #788083;
 }
-a:hover, a.active {
+a:hover, li.active a {
     color: #3498db;
+}
+
+#planned,
+#ongoing,
+#ended {
+    display: none;
 }
 
 .container{
@@ -58,7 +64,7 @@ a:hover, a.active {
     padding: 10px 15px;
     position: relative;
 }
-#subnav a span {
+#subnav a span, #tabs a span {
     position: absolute;
     right: 15px;
     font-size: 11px;
@@ -68,11 +74,11 @@ a:hover, a.active {
     padding-left: 5px;
     padding-right: 5px;
 }
-#subnav a.active span {
+#subnav li.active span {
     color: #fff;
     background: #3498DB;
 }
-#subnav a.active:hover span {
+#subnav li.active a:hover span {
     color: #fff;
 }
 #subnav a:hover span {
@@ -130,6 +136,34 @@ a:hover, a.active {
     color: #2d2e34;
 }
 
+#tabs > a:first-child {
+    border-bottom: 1px solid #FFFFFF;
+    background: #fff;
+}
+#tabs > a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #D2D2D2 #D2D2D2 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #222222;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: -1px;
+    padding: 10px 60px 10px 20px;
+    position: relative;
+    z-index: 1000;
+    margin-right: -1px;
+    background: #F8F9FA;
+}
+#tabs a span {
+    right: 20px;
+}
+
 
 
 
@@ -166,7 +200,7 @@ a:hover, a.active {
     padding: 0 8px;
 }
 /*#F4F5F8*/
-/*#inProgress h3 {
+/*#below-budget h3 {
 background:#f39c12
 }*/
 
@@ -190,7 +224,7 @@ background:#f39c12
     background: #f2faf6!important;
     visibility: visible !important;
 }
-#inProgress .ui-sortable-placeholder {
+#below-budget .ui-sortable-placeholder {
     background: #fafafa!important;
 }
 .points {
@@ -206,11 +240,11 @@ background:#f39c12
     text-align: center;
     border-radius: 2px;
 }
-#inProgress .points, .remove .points {
+#below-budget .points, .remove .points {
     background: #C5CFDE;
 }
 
-/*#inProgress .todo-task {
+/*#below-budget .todo-task {
     border-left: 3px solid #f39c12;
 }*/
 
