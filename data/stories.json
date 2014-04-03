@@ -343,7 +343,7 @@
     },
 	{
       "id": 15,
-      "text": "Responsiv-startsida",
+      "text": "Samlingsida för projekt",
       "size": "4",
       "color": "orange",
       "priority": "",
@@ -371,7 +371,7 @@
     },
     {
       "id": 12,
-      "text": "Responsiv-formulärsida",
+      "text": "Responsiv modal",
       "size": "40",
       "color": "red",
       "priority": "",
@@ -399,7 +399,7 @@
     },
     {
       "id": 14,
-      "text": "Responsiv-artikelsida",
+      "text": "Kunna lägga till stories",
       "size": "12",
       "color": "yellow",
       "priority": "",
@@ -427,7 +427,7 @@
     },
     {
       "id": 16,
-      "text": "Responsiv-listningssida",
+      "text": "Responsiv listningssida",
       "size": "5",
       "color": "green",
       "priority": "",
@@ -453,6 +453,155 @@
         "email": "georgemichael@bluth.com"
       }
     }
-  ]
+  ],
+    "planned": [
+		{
+		  "id": 1,
+		  "text": "Som kund vill jag kunna prioritera backloggen genom dra och släpp",
+		  "size": "1",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 2,
+		  "text": "Som kund vill jag se vilka önskemål som är klara och levererade",
+		  "size": "10",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 3,
+		  "text": "Som stakeholder vill jag se när projektet beräknas vara klart",
+		  "size": "4",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 4,
+		  "text": "Som stakeholder vill jag se en tydlig graf",
+		  "size": "5",
+		  "color": "teal",
+		  "priority": "6",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		}
+	],
+	    "ongoing": [
+		{
+		  "id": 1,
+		  "text": "Exportera och importera backlogg",
+		  "size": "10",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 2,
+		  "text": "Dashboard över projektet",
+		  "size": "10",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		}
+	],
+	    "ended": [
+		{
+		  "id": 1,
+		  "text": "Visa burndown och hastighet",
+		  "size": "8",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 2,
+		  "text": "Genom tydlig ”numrering” el liknande vill jag kunna knyta ihop flera tasks",
+		  "size": "2",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 3,
+		  "text": "Kunna se vilka backloggs som ingått i respektive sprint",
+		  "size": "4",
+		  "color": "teal",
+		  "priority": "9",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 4,
+		  "text": "Skapa en unik startsida för en enskild kund ",
+		  "size": "4",
+		  "color": "teal",
+		  "priority": "6",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		},
+		{
+		  "id": 5,
+		  "text": "Som medlem i projektet vill jag kunna diskutera ",
+		  "size": "2",
+		  "color": "teal",
+		  "priority": "6",
+		  "deadline": "2011-02-24T00:00:00",
+		  "status": "started",
+		  "project": {
+			"id": 1,
+			"name": "Startsida"
+		  }
+		}
+	]
 }
 

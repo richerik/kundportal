@@ -145,7 +145,7 @@ a:hover, li.active a {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-color: #D2D2D2 #D2D2D2 -moz-use-text-color;
+    border-color: #D2D2D2 #D2D2D2;
     border-image: none;
     border-style: solid solid none;
     border-width: 1px 1px medium;
@@ -162,6 +162,7 @@ a:hover, li.active a {
 }
 #tabs a span {
     right: 20px;
+    top: 10px;
 }
 
 
