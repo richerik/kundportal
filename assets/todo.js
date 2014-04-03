@@ -22,7 +22,14 @@ data = data || {};
             deleteAll: ".delete-all"
         }, codes = {
             "1": "#over-budget",
-            "2": "#below-budget"
+            "2": "#below-budget",
+            "3": "#planned",
+            "4": "#ongoing",
+            "5": "#ended"
+        },
+        dragContainer = {
+            "1": "#over-budget",
+            "2": "#below-budget",
         };
 
     todo.init = function (options) {
@@ -47,17 +54,14 @@ data = data || {};
             if (navSate == "backlog") {
                 $("#over-budget").show();
                 $("#below-budget").show();
+                $("#below-budget").nextAll(".task-list").hide();
             }
 
         });
 
-        $.each(codes, function (index, value) {
+        $.each(dragContainer, function (index, value) {
 
-            var placeholder, runOnce = false, currentArea, taskItems, taskPoints = 0, allTaskPoints = 0, notBudgetTaskPoints = 0;;
-            var sortIndex;
-            var secondSortIndex;
-            var position = 0;
-            var positionTwo;
+            var placeholder, taskItems, allTaskPoints = 0, notBudgetTaskPoints = 0;
 
             $(value).sortable({
                 items: '> .todo-task',
@@ -223,11 +227,11 @@ data = data || {};
             
         }
 
-        //if (params.code != "1" && params.code != "2") {
+        if (params.code != "1" && params.code != "2") {
 
-        //    parent = params.code;
+            parent = $(codes[params.code]);
 
-        //}
+        }
 
         wrapper = $("<div />", {
             "class": defaults.todoTask,
@@ -251,44 +255,44 @@ data = data || {};
             "text": params.tag
         }).appendTo(wrapper);
 
-        $.each($("#subnav li a:not(.backlog)"), function (index, states) {
+        //$.each($("#subnav li a:not(.backlog)"), function (index, states) {
 
             
-            maxPoints = $(this).data("points");
+        //    maxPoints = $(this).data("points");
 
-            if (index == 0) {
-                allPoints += parseInt(params.points);
-            }
+        //    if (index == 0) {
+        //        allPoints += parseInt(params.points);
+        //    }
 
-            if (allPoints > maxPoints) {
-                return;
-            }
+        //    if (allPoints > maxPoints) {
+        //        return;
+        //    }
 
-            parent = "#" + $(this).attr("class");
+        //    parent = "#" + $(this).attr("class");
 
-            wrapper = $("<div />", {
-                "class": defaults.todoTask,
-                "id": defaults.taskId + params.id,
-                "data": params.id,
-                "data-points": params.points
-            }).appendTo(parent);
+        //    wrapper = $("<div />", {
+        //        "class": defaults.todoTask,
+        //        "id": defaults.taskId + params.id,
+        //        "data": params.id,
+        //        "data-points": params.points
+        //    }).appendTo(parent);
 
-            $("<div />", {
-                "class": "points",
-                "text": params.points
-            }).appendTo(wrapper);
+        //    $("<div />", {
+        //        "class": "points",
+        //        "text": params.points
+        //    }).appendTo(wrapper);
 
-            $("<div />", {
-                "class": defaults.todoHeader,
-                "text": params.title
-            }).appendTo(wrapper);
+        //    $("<div />", {
+        //        "class": defaults.todoHeader,
+        //        "text": params.title
+        //    }).appendTo(wrapper);
 
-            $("<div />", {
-                "class": "tags",
-                "text": params.tag
-            }).appendTo(wrapper);
+        //    $("<div />", {
+        //        "class": "tags",
+        //        "text": params.tag
+        //    }).appendTo(wrapper);
 
-        });
+        //});
 
     };
 
@@ -311,6 +315,69 @@ data = data || {};
                     tempData = {
                         id: id,
                         code: "1",
+                        title: title,
+                        points: points,
+                        tag: tag
+                    };
+
+                    // Saving element in local storage
+                    data[id] = tempData;
+
+                    // Generate Todo Element
+                    generateStories(tempData);
+                });
+                $.each(stories["planned"], function (index, params) {
+
+                    title = params.text;
+                    points = params.size;
+                    tag = params.project.name;
+
+                    id = new Date().getTime();
+                    tempData = {
+                        id: id,
+                        code: "3",
+                        title: title,
+                        points: points,
+                        tag: tag
+                    };
+
+                    // Saving element in local storage
+                    data[id] = tempData;
+
+                    // Generate Todo Element
+                    generateStories(tempData);
+                });
+                $.each(stories["ongoing"], function (index, params) {
+
+                    title = params.text;
+                    points = params.size;
+                    tag = params.project.name;
+
+                    id = new Date().getTime();
+                    tempData = {
+                        id: id,
+                        code: "4",
+                        title: title,
+                        points: points,
+                        tag: tag
+                    };
+
+                    // Saving element in local storage
+                    data[id] = tempData;
+
+                    // Generate Todo Element
+                    generateStories(tempData);
+                });
+                $.each(stories["ended"], function (index, params) {
+
+                    title = params.text;
+                    points = params.size;
+                    tag = params.project.name;
+
+                    id = new Date().getTime();
+                    tempData = {
+                        id: id,
+                        code: "5",
                         title: title,
                         points: points,
                         tag: tag
