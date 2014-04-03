@@ -61,11 +61,7 @@ data = data || {};
 
         $.each(dragContainer, function (index, value) {
 
-            var placeholder, runOnce = false, currentArea, taskItems, taskPoints = 0, allTaskPoints = 0, notBudgetTaskPoints = 0;;
-            var sortIndex;
-            var secondSortIndex;
-            var position = 0;
-            var positionTwo;
+            var placeholder, taskItems, allTaskPoints = 0, notBudgetTaskPoints = 0;
 
             $(value).sortable({
                 items: '> .todo-task',

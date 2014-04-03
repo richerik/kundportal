@@ -147,7 +147,7 @@
     },
     {
       "id": 4,
-      "text": "Nytt utseende för sökidan",
+      "text": "Nytt utseende för söksidan",
       "size": "4",
       "color": "orange",
       "priority": "",
@@ -343,7 +343,7 @@
     },
 	{
       "id": 15,
-      "text": "Samlingsida för projekt",
+      "text": "Samlingsida för medlemmar i projektet",
       "size": "4",
       "color": "orange",
       "priority": "",
