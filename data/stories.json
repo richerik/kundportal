@@ -63,7 +63,7 @@
     },
 		{
       "id": 10,
-      "text": "Kiss Maeby",
+      "text": "Responsiv meny",
       "size": "1",
       "color": "green",
       "priority": "",
@@ -91,7 +91,7 @@
     },
     {
       "id": 11,
-      "text": "Get new car.  Too many hop-ons in StairCar.",
+      "text": "Kunna se sin profil i kundportalen",
       "size": "2",
       "color": "teal",
       "priority": "",
@@ -147,7 +147,7 @@
     },
     {
       "id": 4,
-      "text": "Find Dad, win his approval",
+      "text": "Nytt utseende för sökidan",
       "size": "4",
       "color": "orange",
       "priority": "",
@@ -175,7 +175,7 @@
     },
     {
       "id": 5,
-      "text": "Get acting job",
+      "text": "Sökordsförslag",
       "size": "7",
       "color": "blue",
       "priority": "",
@@ -231,7 +231,7 @@
     },
     {
       "id": 7,
-      "text": "Get back control of company",
+      "text": "Uppdatera AgileZen utifrån användarens actions",
       "size": "20",
       "color": "teal",
       "priority": "",
@@ -259,7 +259,7 @@
     },
     {
       "id": 8,
-      "text": "Go out with Steve Holt (Steve Holt!)",
+      "text": "Uppgradering av EPiServer",
       "size": "10",
       "color": "red",
       "priority": "",
@@ -315,7 +315,7 @@
     },
 	{
       "id": 13,
-      "text": "Become World's first Analyst + Therapist",
+      "text": "Lista kundens samtliga projekt",
       "size": "2",
       "color": "blue",
       "priority": "",
@@ -343,7 +343,7 @@
     },
 	{
       "id": 15,
-      "text": "Perform amazing magic trick",
+      "text": "Responsiv-startsida",
       "size": "4",
       "color": "orange",
       "priority": "",
@@ -371,7 +371,7 @@
     },
     {
       "id": 12,
-      "text": "Marry Me!",
+      "text": "Responsiv-formulärsida",
       "size": "40",
       "color": "red",
       "priority": "",
@@ -399,7 +399,7 @@
     },
     {
       "id": 14,
-      "text": "Convince myself I don't need Mother",
+      "text": "Responsiv-artikelsida",
       "size": "12",
       "color": "yellow",
       "priority": "",
@@ -427,7 +427,7 @@
     },
     {
       "id": 16,
-      "text": "Work in the Banana stand",
+      "text": "Responsiv-listningssida",
       "size": "5",
       "color": "green",
       "priority": "",

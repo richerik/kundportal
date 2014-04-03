@@ -47,6 +47,7 @@ data = data || {};
             if (navSate == "backlog") {
                 $("#over-budget").show();
                 $("#below-budget").show();
+                $("#below-budget").nextAll(".task-list").hide();
             }
 
         });
