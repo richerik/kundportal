@@ -26,6 +26,10 @@ data = data || {};
             "3": "#planned",
             "4": "#ongoing",
             "5": "#ended"
+        },
+        dragContainer = {
+            "1": "#over-budget",
+            "2": "#below-budget",
         };
 
     todo.init = function (options) {
@@ -55,7 +59,7 @@ data = data || {};
 
         });
 
-        $.each(codes, function (index, value) {
+        $.each(dragContainer, function (index, value) {
 
             var placeholder, runOnce = false, currentArea, taskItems, taskPoints = 0, allTaskPoints = 0, notBudgetTaskPoints = 0;;
             var sortIndex;
